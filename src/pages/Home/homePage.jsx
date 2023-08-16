@@ -13,12 +13,12 @@ export const Home = () => {
     alteraEstiloBody('body-home');
 
 
+    // If ternario / verificar se esta logao ou não
 
     alteraHeader(true);
     alteraIconeUsuario(false);
     return (
         <>
-            {console.log(localStorage.idUser)}
             <section className='home'>
                 <p className='home__paragrafo'>Olá! <br /> Veja os amigos disponíveis para adoção!</p>
                 {pets.map(pet => <Card nome={pet.nome} img={pet.img} idade={pet.tamanho}

@@ -40,9 +40,9 @@ export const Register = () => {
       .then(response => {
         // Processar a resposta do servidor, se necessário
         console.log('res', response.data.insertId);
-        if (response.data.insertId) {
-          localStorage.idUser = response.data.insertId
-          // window.location.href = "/"
+        if (response.data.insertId > 0) {
+          localStorage.setItem('idUser', response.data.insertId)
+          window.location.href = "/"
         }
       })
       .catch(error => {

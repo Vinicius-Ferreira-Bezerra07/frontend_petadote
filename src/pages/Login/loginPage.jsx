@@ -27,12 +27,11 @@ export const Login = () => {
     })
       .then(response => {
         // Processar a resposta do servidor, se necessário
-        console.log('teste', response.data);
         if (response.data.validation == "true") {
-          console.log(response.data.dados.id_user);
-          localStorage.setItem('idUser', response.data.dados.id_user)
-          console.log(localStorage.getItem(idUser));
-          // window.location.href = "/"
+          console.log(response.data.id_user);
+          localStorage.setItem('idUser', response.data.id_user)
+          console.log(localStorage.getItem('idUser'));
+          window.location.href = "/"
         } else {
           console.log('res', response.data);
         }
